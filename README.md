@@ -167,3 +167,79 @@ $ git reset --hard
 HEAD is now at 6d99e82 about and team page were added
 
 ```
+##Bundle 2
+
+## Exercise 1
+
+```bash
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (dev)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/bundle-2)
+$ git add services.html
+fatal: pathspec 'services.html' did not match any files
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/bundle-2)
+$ git add services.html
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/bundle-2)
+$ git commit -m "services.html added"
+[ft/bundle-2 52667e9] services.html added
+ 1 file changed, 15 insertions(+)
+ create mode 100644 services.html
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/bundle-2)
+$ git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/bundle-2)
+$ git push --set-upstream origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 475 bytes | 475.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Gihozo23/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/Gihozo23/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git pull
+Updating 18db4f9..c5a7ba5
+Fast-forward
+ about.html    | 15 +++++++++++++++
+ home.html     | 15 +++++++++++++++
+ services.html | 15 +++++++++++++++
+ 3 files changed, 45 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+```
