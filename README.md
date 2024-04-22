@@ -691,3 +691,64 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 ## Bundle 3
 
 ### Exercise 1
+
+```bash
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git remote add git-copy https://github.com/Gihozo23/Gym-Git-Exercise-Solutions-Copy.git
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git remote
+git-copy
+origin
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git add .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git commit -m "updated the home page"                                                                                    
+[main bb68d8c] updated the home page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git push git-copy
+Enumerating objects: 50, done.
+Counting objects: 100% (50/50), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (47/47), done.
+Writing objects: 100% (50/50), 10.00 KiB | 426.00 KiB/s, done.
+Total 50 (delta 26), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (26/26), done.
+To https://github.com/Gihozo23/Gym-Git-Exercise-Solutions-Copy.git
+ * [new branch]      main -> main
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 318 bytes | 318.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Gihozo23/Gym-Git-Exercise-Solutions.git
+   0b4501b..bb68d8c  main -> main
+```
+
+### Exercise 2
+
+```bash
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/footer)
+$ git add .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/footer)
+$ git commit -m "updated the readme file"
+[ft/footer 10f65e8] updated the readme file
+ 1 file changed, 50 insertions(+), 1 deletion(-)
+
+
+```
+
