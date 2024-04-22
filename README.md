@@ -688,6 +688,237 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
 ```
 
-## Bundle 3
+## Bundle 4
+
+### Exercise 1
+
+```bash
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git remote add git-copy https://github.com/Gihozo23/Gym-Git-Exercise-Solutions-Copy.git
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git remote
+git-copy
+origin
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git add .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git commit -m "updated the home page"                                                                                    
+[main bb68d8c] updated the home page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git push git-copy
+Enumerating objects: 50, done.
+Counting objects: 100% (50/50), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (47/47), done.
+Writing objects: 100% (50/50), 10.00 KiB | 426.00 KiB/s, done.
+Total 50 (delta 26), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (26/26), done.
+To https://github.com/Gihozo23/Gym-Git-Exercise-Solutions-Copy.git
+ * [new branch]      main -> main
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 318 bytes | 318.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Gihozo23/Gym-Git-Exercise-Solutions.git
+   0b4501b..bb68d8c  main -> main
+```
+
+### Exercise 2
+
+```bash
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/footer)
+$ git add .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/footer)
+$ git commit -m "updated the readme file"
+[ft/footer 10f65e8] updated the readme file
+ 1 file changed, 50 insertions(+), 1 deletion(-)
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/footer)
+$ git add .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/footer)
+$ git commit -m "updated the readme file for other time"
+[ft/footer 52de731] updated the readme file for other time
+ 1 file changed, 12 insertions(+)
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 958 bytes | 479.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Gihozo23/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/Gihozo23/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/squashing)
+$ git merge --squash ft/footer
+Updating bb68d8c..52de731
+Fast-forward
+Squash commit -- not updating HEAD
+ README.md | 63 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 62 insertions(+), 1 deletion(-)
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/squashing)
+$ git log
+commit bb68d8c863882e01febe5fe8518180e3ff782523 (HEAD -> ft/squashing, origin/main, git-copy/main, main)
+Author: Gihozo23 <christellegihozo23@gmail.com>
+Date:   Mon Apr 22 21:52:21 2024 +0200
+
+    updated the home page
+
+commit 0b4501b61346ad312834121535c09c39aea70644
+Author: Gihozo23 <christellegihozo23@gmail.com>
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/squashing)
+$ git add .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing 5e1c3f7] footer changes squashing
+ 1 file changed, 62 insertions(+), 1 deletion(-)
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/squashing)
+$ git push
+fatal: The current branch ft/squashing has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/squashing)
+$ git push --set-upstream origin ft/squashing
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 682 bytes | 341.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Gihozo23/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/Gihozo23/Gym-Git-Exercise-Solutions.git
+ * /[new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+
+```
+## Bundle 5
+
+### Exercise 1
+DONE
+
+### Exercise 2
+
+```bash
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/squashing)
+$ cd .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/squashing)
+$ cd "forked repo"
+bash: cd: forked repo: No such file or directory
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/squashing)
+$ cd ..
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym
+$ cd "forked repo"
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo
+$ git clone https://github.com/Gihozo23/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 127, done.
+remote: Counting objects: 100% (30/30), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 127 (delta 17), reused 12 (delta 12), pack-reused 97Receiving objects:  97% (124/127), 1.62 MiB | 817.00 KiB/Receiving objects: 100% (127/127), 1.95 MiB | 878.00 KiB/s, done.
+Resolving deltas: 100% (18/18), done.
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo
+$ code .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo
+$ cd "git-cafe-exercise"
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (main)
+$ git add .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (main)
+$ git commit -m "changed Welcome to our place to Welcome to our restaurant in index file"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (main)
+$ git add .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (main)
+$ git commit -m "changed Welcome to our place to Welcome to our restaurant in index file"
+[main fddcc00] changed Welcome to our place to Welcome to our restaurant in index file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 339 bytes | 339.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Gihozo23/git-cafe-exercise.git
+   458ac81..fddcc00  main -> main
+
+
+```
+
+## Bundle 6
 
 ### Exercise 1
