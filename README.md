@@ -737,6 +737,18 @@ To https://github.com/Gihozo23/Gym-Git-Exercise-Solutions.git
 ### Exercise 2
 
 ```bash
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/footer)
+$ git add .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (ft/footer)
+$ git commit -m "updated the readme file"
+[ft/footer 10f65e8] updated the readme file
+ 1 file changed, 50 insertions(+), 1 deletion(-)
+
 
 ```
 
