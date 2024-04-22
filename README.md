@@ -621,5 +621,25 @@ $ git checkout main
 Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git add .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git commit -m "updated readme file"
+[main 4714bd9] updated readme file
+ 1 file changed, 266 insertions(+), 1 deletion(-)
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/Gym Git Exercise Solutions (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.31 KiB | 2.31 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Gihozo23/Gym-Git-Exercise-Solutions.git
+   0db9f8c..4714bd9  main -> main
+
 
 ```
