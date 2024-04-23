@@ -922,3 +922,115 @@ To https://github.com/Gihozo23/git-cafe-exercise.git
 ## Bundle 6
 
 ### Exercise 1
+```bash
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo
+$ cd "git-cafe-exercise"
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (main)
+$ git checkout -b ft/branch
+Switched to a new branch 'ft/branch'
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (ft/branch)
+$ git add .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (ft/branch)
+$ git commit -m "changed the menu page"
+[ft/branch 7614c1e] changed the menu page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (ft/branch)
+$ git push
+fatal: The current branch ft/branch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/branch
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (ft/branch)
+$ git push --set-upstream origin ft/branch
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 345 bytes | 345.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/branch' on GitHub by visiting:
+remote:      https://github.com/Gihozo23/git-cafe-exercise/pull/new/ft/branch
+remote:
+To https://github.com/Gihozo23/git-cafe-exercise.git
+ * [new branch]      ft/branch -> ft/branch
+branch 'ft/branch' set up to track 'origin/ft/branch'.
+
+```
+
+### Exercise 2
+
+```bash
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (ft/branch)
+$ git checkout -b bugfix/branch
+Switched to a new branch 'bugfix/branch'
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (bugfix/branch)
+$ git add .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (bugfix/branch)
+$ git commit -m "changed the index-4.html"
+On branch bugfix/branch
+nothing to commit, working tree clean
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (bugfix/branch)
+$ git push
+fatal: The current branch bugfix/branch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bugfix/branch
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (bugfix/branch)
+$ git push --set-upstream origin bugfix/branch
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'bugfix/branch' on GitHub by visiting:
+remote:      https://github.com/Gihozo23/git-cafe-exercise/pull/new/bugfix/branch
+remote:
+To https://github.com/Gihozo23/git-cafe-exercise.git
+ * [new branch]      bugfix/branch -> bugfix/branch
+branch 'bugfix/branch' set up to track 'origin/bugfix/branch'.
+
+```
+
+### Exercise 3
+
+```bash
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (bugfix/branch)
+$ git add .
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (bugfix/branch)
+$ git commit -m "changed the index-4.html"
+[bugfix/branch 13c7f94] changed the index-4.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-VK7L602 MINGW64 ~/Desktop/theGym/forked repo/git-cafe-exercise (bugfix/branch)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 319 bytes | 319.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Gihozo23/git-cafe-exercise.git
+   7614c1e..13c7f94  bugfix/branch -> bugfix/branch
+
+
+```
+### Exercise 4
